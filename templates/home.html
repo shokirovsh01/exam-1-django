@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group-list</title>
+</head>
+<style>
+
+.showing_group{
+    background-color: aqua; 
+    padding: 10px;
+    border-radius: 30px;
+    gap: 100px;
+    display: flex;
+    gap: 50px;
+
+}
+
+.card{
+
+justify-content: space-around;
+align-items: baseline;
+width: auto;
+}
+
+p{
+    background-color: azure;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+</style>
+<body style="max-width: 2000px; margin: auto; padding: 50px;">
+    
+
+<div style=" border-radius: 20px; color: white; display: flex;background-color: aqua;margin: auto; padding: 10px; justify-content: space-evenly;">
+    <h1>Group List</h1>
+    
+    
+</div>
+<br><br>
+
+<div style="display: flex; justify-content: space-evenly; flex-wrap: wrap;">
+
+
+    {% for group in groups %}
+
+
+
+
+
+    
+    <div class="showing_group">
+        
+        <div class="card">
+            
+            <p>Name:</p>
+            <p>Room:</p>
+            <p>Start_date:</p>
+        </div>
+        
+        <div class="card">
+            
+            <p>{{group.name}}</p>
+            <p>{{group.room}}</p>
+            <p>{{group.start_date}}</p>
+            
+        </div>
+        
+    </div>
+    <br><br>
+    
+    {% endfor %}
+    <br>
+</div>
+    
+</body>
+</html>
